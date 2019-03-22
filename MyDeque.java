@@ -22,14 +22,21 @@ public class MyDeque<E>{
     }
     return returner;
   }
-  public void addFirst(E element){}
-  public void addLast(E element){ }
+  public void addFirst(E element){
+    if(start > 0 && start<=end){}
+      data[--start]=element;
+  }
+  public void addLast(E element){
+    if(end>=start && end <= data.length-2)
+      data[++end]=element;
+  }
   public E removeFirst(){
-    if(end>=start)
-      start++;}
+    if(end>=start){
+      return data[start++];
+  }
   public E removeLast(){
     if(end>=start)
-      end--;
+      return data[end--];
   }
   public E getFirst(){
     return data[start];
