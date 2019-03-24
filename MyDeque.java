@@ -46,7 +46,8 @@ public class MyDeque<E>{
     if(data.length == size) resize();
     size++;
     if(start==-1){
-      start,end=0;
+      start=0;
+      end=0;
       daat[0]=element;
     }
     else if(start==0){
@@ -59,7 +60,8 @@ public class MyDeque<E>{
     if(data.length == size) resize();
     size++;
     if(start==-1){
-      start,end=0;
+      start=0;
+      end=0;
       daat[0]=element;
     }
     else if(end==data.length-1)
@@ -69,8 +71,10 @@ public class MyDeque<E>{
   }
   public E removeFirst(){
     size--;
-    if(start==end)
-      start,end=-1;
+    if(start==end){
+      start=-1;
+      end=-1;
+    }
     else if(start==data.length-1){
       start=0;
       return data[data.length-1];
@@ -79,8 +83,10 @@ public class MyDeque<E>{
   }
   public E removeLast(){
     size--;
-    if(start==end)
-      start,end=-1;
+    if(start==end){
+      start=-1;
+      end=-1;
+    }
     else if(end==0){
       end = data.length-1;
       return data[0];
