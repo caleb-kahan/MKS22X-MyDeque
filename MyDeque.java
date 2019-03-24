@@ -43,6 +43,7 @@ public class MyDeque<E>{
     }
   }
   public void addFirst(E element){
+    if(data.length == size) resize();
     if(start > 0 && start<=end){}
       data[--start]=element;
   }
@@ -52,17 +53,21 @@ public class MyDeque<E>{
 
   }
   public E removeFirst(){
+    size--;
     if(start==size-1){
       start=0;
       return data[size-1];
     }
+    if(start==end) end++;
     return data[start++];
   }
   public E removeLast(){
+    size--;
     if(end==0){
       end = size-1;
       return data[0];
     }
+    if(start==end) start--;
     return data[end--];
   }
   public E getFirst(){
