@@ -43,7 +43,9 @@ public class MyDeque<E>{
     }
   }
   public void addFirst(E element){
+    size++;
     if(data.length == size) resize();
+    if(start==end) end++;
     if(start > 0 && start<=end){}
       data[--start]=element;
   }
