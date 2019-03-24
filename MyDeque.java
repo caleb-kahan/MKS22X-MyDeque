@@ -48,7 +48,7 @@ public class MyDeque<E>{
     if(start==-1){
       start=0;
       end=0;
-      daat[0]=element;
+      data[0]=element;
     }
     else if(start==0){
       data[start=data.length-1] = element;
@@ -62,7 +62,7 @@ public class MyDeque<E>{
     if(start==-1){
       start=0;
       end=0;
-      daat[0]=element;
+      data[0]=element;
     }
     else if(end==data.length-1)
       data[end=0]=element;
