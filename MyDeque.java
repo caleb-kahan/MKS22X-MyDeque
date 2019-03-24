@@ -22,6 +22,26 @@ public class MyDeque<E>{
     }
     return returner;
   }
+  private void resize(){
+    E[] copy = data;
+    data = new E [data.length+1000];
+    int i = start, j = 0;
+    if(end>=start){
+      while(i<=end){
+        data[j]=copy[i];
+        i++;
+        j++;
+      }
+    }
+    else{
+      while(end>=i){
+        data[j]=copy[i];
+        i++;
+        j++;
+        if(i==data.length) i = 0;
+      }
+    }
+  }
   public void addFirst(E element){
     if(start > 0 && start<=end){}
       data[--start]=element;
