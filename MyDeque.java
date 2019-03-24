@@ -30,25 +30,28 @@ public class MyDeque<E>{
     E[] copy = data;
     data = (E[])new Object[data.length+1000];
     int i = start, j = 0;
-    if(end>=start){
-      while(i<=end){
-        data[j]=copy[i];
-        i++;
-        j++;
+    if(i!=-1){
+      if(end>=start){
+        while(i<=end){
+          data[j]=copy[i];
+          i++;
+          j++;
+        }
       }
-    }
-    else{
-      while(end>=i){
-        data[j]=copy[i];
-        i++;
-        j++;
-        if(i==data.length) i = 0;
+      else{
+        while(end>=i){
+          data[j]=copy[i];
+          i++;
+          j++;
+          if(i==data.length) i = 0;
+        }
       }
     }
   }
   public void addFirst(E element){
     if(element == null) throw new NullPointerException("Specified element is null");
-    if(data.length == size) resize();
+    if(data.length == size)
+      resize();
     size++;
     if(start==-1){
       start=0;
