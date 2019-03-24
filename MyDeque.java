@@ -16,11 +16,11 @@ public class MyDeque<E>{
     return size;
   }
   public String toString(){
-    String returner = "";
+    String returner = "{";
     for(E gener: data){
       returner += gener + " ";
     }
-    return returner;
+    return returner+ "}";
   }
   private void resize(){
     E[] copy = data;
