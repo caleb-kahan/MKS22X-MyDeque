@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 public class MyDeque<E>{
   private E[] data;
   private int size, start, end;
@@ -44,7 +47,7 @@ public class MyDeque<E>{
     }
   }
   public void addFirst(E element){
-    if(element = null) throw new NullPointerException("Specified element is null");
+    if(element == null) throw new NullPointerException("Specified element is null");
     if(data.length == size) resize();
     size++;
     if(start==-1){
@@ -59,7 +62,7 @@ public class MyDeque<E>{
       data[--start]=element;
   }
   public void addLast(E element){
-    if(element = null) throw new NullPointerException("Specified element is null");
+    if(element == null) throw new NullPointerException("Specified element is null");
     if(data.length == size) resize();
     size++;
     if(start==-1){
