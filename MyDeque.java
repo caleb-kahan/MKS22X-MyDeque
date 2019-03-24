@@ -85,7 +85,7 @@ public class MyDeque<E>{
       int temp = start;
       start=-1;
       end=-1;
-      return data[start];
+      return data[temp];
     }
     else if(start==data.length-1){
       start=0;
