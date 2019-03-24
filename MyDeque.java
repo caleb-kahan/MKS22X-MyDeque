@@ -48,31 +48,29 @@ public class MyDeque<E>{
       data[--start]=element;
   }
   public void addLast(E element){
+    size++;
     if(data.length == size) resize();
-    if(end>=start){
-      if (end==data.length-1)
-        data[end=0]=element;
-      else data[++end]=element;
+    if(start==end) start++;
+    if (end==data.length-1)
+      data[end=0]=element;
+    else data[++end]=element;
     }
-
-
-  }
   public E removeFirst(){
     size--;
+    if(start==end) end++;
     if(start==size-1){
       start=0;
       return data[size-1];
     }
-    if(start==end) end++;
     return data[start++];
   }
   public E removeLast(){
     size--;
+    if(start==end) start--;
     if(end==0){
       end = size-1;
       return data[0];
     }
-    if(start==end) start--;
     return data[end--];
   }
   public E getFirst(){
