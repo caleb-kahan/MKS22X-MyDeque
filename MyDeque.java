@@ -7,9 +7,9 @@ public class MyDeque<E>{
   }
   @SuppressWarnings("unchecked")
   public MyDeque(int initialCapacity){
-    size= initialCapacity;
-    start =  0;
-    end   =  0;
+    size= 0;
+    start =  -1;
+    end   =  -1;
     data = (E[])new Object[size];
   }
   public int size(){
@@ -29,6 +29,7 @@ public class MyDeque<E>{
   public void addLast(E element){
     if(end>=start && end <= data.length-2)
       data[++end]=element;
+
   }
   public E removeFirst(){
     if(start==size-1){
