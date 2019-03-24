@@ -30,7 +30,7 @@ public class MyDeque<E>{
     E[] copy = data;
     data = (E[])new Object[data.length+1000];
     int i = start, j = 0;
-    if(i!=-1){
+    if(size !=0){
       if(end>=start){
         while(i<=end){
           data[j]=copy[i];
@@ -82,8 +82,10 @@ public class MyDeque<E>{
     if(size ==0) throw new NoSuchElementException ("Deque is Empty");
     size--;
     if(start==end){
+      int temp = start;
       start=-1;
       end=-1;
+      return data[start];
     }
     else if(start==data.length-1){
       start=0;
@@ -95,8 +97,10 @@ public class MyDeque<E>{
     if(size ==0) throw new NoSuchElementException ("Deque is Empty");
     size--;
     if(start==end){
+      int temp = start;
       start=-1;
       end=-1;
+      return data[temp];
     }
     else if(end==0){
       end = data.length-1;
