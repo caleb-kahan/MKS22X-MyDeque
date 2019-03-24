@@ -22,9 +22,10 @@ public class MyDeque<E>{
     }
     return returner+ "}";
   }
+  @SuppressWarnings("unchecked")
   private void resize(){
     E[] copy = data;
-    data = new E [data.length+1000];
+    data = (E[])new Object[data.length+1000];
     int i = start, j = 0;
     if(end>=start){
       while(i<=end){
