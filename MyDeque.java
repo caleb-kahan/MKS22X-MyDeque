@@ -49,8 +49,12 @@ public class MyDeque<E>{
   }
   public void addLast(E element){
     if(data.length == size) resize();
-    if(end>=start && end <= data.length-2)
-      data[++end]=element;
+    if(end>=start){
+      if (end==data.length-1)
+        data[end=0]=element;
+      else data[++end]=element;
+    }
+
 
   }
   public E removeFirst(){
