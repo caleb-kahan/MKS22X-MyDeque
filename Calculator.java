@@ -3,6 +3,7 @@ public class Calculator{
   public static double eval(String s){
     Scanner sys = new Scanner(s);
     MyDeque<Double> tool = new MyDeque<Double>(20);
+    double result=0;
     while(sys.hasNext()){
       if(! sys.hasNextDouble()){
         char operator = sys.next().charAt(0);
@@ -10,20 +11,20 @@ public class Calculator{
         double firstArg = tool.removeLast();
         switch(operator){
           case '+':
-            return firstArg  + secondArg;
+            result+= firstArg  + secondArg;
           case '-':
-            return firstArg - secondArg;
+            result+= firstArg - secondArg;
           case '*':
-            return firstArg * secondArg;
+            result+= firstArg * secondArg;
           case '/':
-            return firstArg / secondArg;
+            result+= firstArg / secondArg;
           case '%':
-            return firstArg % secondArg;
+            result+= firstArg % secondArg;
         }
       }
       else
         tool.addLast(sys.nextDouble());
     }
-    return -1;
+    return result;
   }
 }
