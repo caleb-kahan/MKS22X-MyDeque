@@ -22,7 +22,7 @@ public class Calculator{
         }
       }
       else
-        tool.add(sys);
+        tool.addLast(sys);
     }
   }
 }
