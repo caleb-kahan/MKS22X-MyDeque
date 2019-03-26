@@ -11,15 +11,15 @@ public class Calculator{
         double firstArg = tool.removeLast();
         switch(operator){
           case '+':
-            result+= firstArg  + secondArg;
+            tool.addLast(firstArg  + secondArg);
           case '-':
-            result+= firstArg - secondArg;
+            tool.addLast(result+= firstArg - secondArg);
           case '*':
-            result+= firstArg * secondArg;
+            tool.addLast(result+= firstArg * secondArg);
           case '/':
-            result+= firstArg / secondArg;
+            tool.addLast(result+= firstArg / secondArg);
           case '%':
-            result+= firstArg % secondArg;
+            tool.addLast(result+= firstArg % secondArg);
         }
       }
       else
