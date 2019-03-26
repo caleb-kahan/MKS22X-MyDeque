@@ -24,5 +24,6 @@ public class Calculator{
       else
         tool.addLast(sys.nextInt());
     }
+    return -1;
   }
 }
