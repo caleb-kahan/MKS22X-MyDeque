@@ -18,7 +18,7 @@ public class Calculator{
           case '/':
             return firstArg * 1.0 / secondArg;
           case '%':
-            return firstArg * 1.0 & secondArg;
+            return firstArg * 1.0 * secondArg;
         }
       }
       else
