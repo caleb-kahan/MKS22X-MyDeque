@@ -2,9 +2,9 @@ import java.util.Scanner;
 public class Calculator{
   public static double eval(String s){
     Scanner sys = new Scanner(s);
-    MyDeque<Integer> tool = new MyDeque<Integer>(20);
+    MyDeque<Double> tool = new MyDeque<Double>(20);
     while(sys.hasNext()){
-      if(! sys.hasNextInt()){
+      if(! sys.hasNextDouble()){
         char operator = sys.next().charAt(0);
         double secondArg = tool.removeLast();
         double firstArg = tool.removeLast();
@@ -22,7 +22,7 @@ public class Calculator{
         }
       }
       else
-        tool.addLast(sys.nextInt());
+        tool.addLast(sys.nextDouble());
     }
     return -1;
   }
