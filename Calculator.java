@@ -5,7 +5,7 @@ public class Calculator{
     MyDeque<Double> tool = new MyDeque<Double>(20);
     double result=0;
     while(sys.hasNext()){
-      if(! sys.hasNextDouble()){
+      if(! sys.hasNextInt() && ! sys.hasNextDouble()){
         char operator = sys.next().charAt(0);
         double secondArg = tool.removeLast();
         double firstArg = tool.removeLast();
@@ -13,13 +13,13 @@ public class Calculator{
           case '+':
             tool.addLast(firstArg  + secondArg);
           case '-':
-            tool.addLast(result+= firstArg - secondArg);
+            tool.addLast(firstArg - secondArg);
           case '*':
-            tool.addLast(result+= firstArg * secondArg);
+            tool.addLast(firstArg * secondArg);
           case '/':
-            tool.addLast(result+= firstArg / secondArg);
+            tool.addLast(firstArg / secondArg);
           case '%':
-            tool.addLast(result+= firstArg % secondArg);
+            tool.addLast(firstArg % secondArg);
         }
       }
       else
