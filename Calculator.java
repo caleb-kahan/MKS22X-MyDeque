@@ -9,10 +9,8 @@ public class Calculator{
     while(sys.hasNext()){
       if(! sys.hasNextDouble()){
         char operator = sys.next().charAt(0);
-        System.out.println("Operator: "+ operator);
         double secondArg = tool.removeLast();
         double firstArg = tool.removeLast();
-        System.out.println(tool);
         switch(operator){
           case '+':
             tool.addLast(firstArg  + secondArg);
@@ -34,12 +32,9 @@ public class Calculator{
         }
       }
       else{
-        double num = sys.nextDouble();
-        tool.addLast(num);
-        System.out.println("Double: "+num);
-      }
+        tool.addLast(sys.nextDouble());
+     }
     }
-    //System.out.println(tool);
     return tool.getFirst();
   }
 }
