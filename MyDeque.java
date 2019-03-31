@@ -18,7 +18,7 @@ public class MyDeque<E>{
   public int size(){
     return size;
   }
-  public int datLLen(){
+  public int datLen(){
     return data.length;
   }
   public String toString(){

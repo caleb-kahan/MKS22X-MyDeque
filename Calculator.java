@@ -6,6 +6,7 @@ public class Calculator{
   public static double eval(String s){
     Scanner sys = new Scanner(s);
     MyDeque<Double> tool = new MyDeque<Double>(10);
+    System.out.println(tool.datLen());
     while(sys.hasNext()){
       if(! sys.hasNextDouble()){
         char operator = sys.next().charAt(0);
@@ -37,7 +38,7 @@ public class Calculator{
      }
     }
     System.out.println(tool.size());
-    System.out.println(datLen());
+    System.out.println(tool.datLen());
     System.out.println(tool);
 
     return tool.getLast();
