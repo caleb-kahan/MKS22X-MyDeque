@@ -13,7 +13,7 @@ public class MyDeque<E>{
     size= 0;
     start =  -1;
     end   =  -1;
-    data = (E[])new Object[size];
+    data = (E[])new Object[initialCapacity];
   }
   public int size(){
     return size;
