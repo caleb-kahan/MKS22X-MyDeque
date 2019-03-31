@@ -12,7 +12,7 @@ public class Calculator{
         System.out.println("Operator: "+ operator);
         double secondArg = tool.removeLast();
         double firstArg = tool.removeLast();
-        //ystem.out.println("run");
+        System.out.println(tool);
         switch(operator){
           case '+':
             tool.addLast(firstArg  + secondArg);
@@ -38,7 +38,6 @@ public class Calculator{
         tool.addLast(num);
         System.out.println("Double: "+num);
       }
-      System.out.println(tool);
     }
     //System.out.println(tool);
     return tool.getFirst();
