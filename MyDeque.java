@@ -18,9 +18,6 @@ public class MyDeque<E>{
   public int size(){
     return size;
   }
-  public int datLen(){
-    return data.length;
-  }
   public String toString(){
     String returner = "{";
     int i =start;
