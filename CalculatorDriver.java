@@ -38,8 +38,7 @@ public class CalculatorDriver{
       if(testOut == outputs[i]){
         System.out.println("PASS test case "+i+": "+inputs[i]+" == "+testOut);
         passed++;
-      }else{
-        System.out.println("FAIL test case "+i+": "+inputs[i]+" == "+outputs[i]+", returned "+testOut);
+      }else{        System.out.println("FAIL test case "+i+": "+inputs[i]+" == "+outputs[i]+", returned "+testOut);
       }
     }
     System.out.println("\n"+(100.0*passed/outputs.length)+"%: "+passed+" of "+outputs.length+" test cases passed");
