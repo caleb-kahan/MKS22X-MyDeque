@@ -9,6 +9,7 @@ public class Calculator{
     while(sys.hasNext()){
       if(! sys.hasNextDouble()){
         char operator = sys.next().charAt(0);
+        System.out.println(tool.size());
         double secondArg = tool.removeLast();
         double firstArg = tool.removeLast();
         switch(operator){
@@ -35,6 +36,6 @@ public class Calculator{
         tool.addLast(sys.nextDouble());
      }
     }
-    return tool.getFirst();
+    return tool.getLast();
   }
 }
