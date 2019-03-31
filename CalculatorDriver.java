@@ -33,7 +33,7 @@ public class CalculatorDriver{
       2,2,0,0,4.4,8.7,18,-18,1,1.2,4.5,.5,-1,-.25,1,0,0,12,30,893,26,108,1
     };
     int passed = 0;
-    for(int i=0;i<inputs.length;i++){
+    for(int i=0;i<1;i++){
       double testOut = Calculator.eval(inputs[i]);
       if(testOut == outputs[i]){
         System.out.println("PASS test case "+i+": "+inputs[i]+" == "+testOut);
