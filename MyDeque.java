@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class MyDeque<E>{
-  private E[] data;
+  public E[] data;
   private int size, start, end;
 
   public MyDeque(){
@@ -18,10 +18,28 @@ public class MyDeque<E>{
   public int size(){
     return size;
   }
+  public int datLLen(){
+    return data.length;
+  }
   public String toString(){
     String returner = "{";
-    for(E gener: data){
-      returner += gener + " ";
+    int i =start;
+    if(start<=end){
+      while(i<=end){
+        returner += data[i] + " ";
+        i++;
+      }
+    }
+    else{
+      while(i<data.length){
+        returner += data[i] + " ";
+        i++;
+      }
+      i =0;
+      while(i<=end){
+        returner += data[i] + " ";
+        i++;
+      }
     }
     return returner+ "}";
   }
