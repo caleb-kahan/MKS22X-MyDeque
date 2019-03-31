@@ -36,6 +36,7 @@ public class Calculator{
         tool.addLast(sys.nextDouble());
      }
     }
+    System.out.println(tool.size());
     return tool.getLast();
   }
 }
