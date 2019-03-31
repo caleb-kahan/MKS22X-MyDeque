@@ -45,7 +45,6 @@ public class MyDeque<E>{
   }
   @SuppressWarnings("unchecked")
   private void resize(){
-    System.out.println("hi");
     E[] copy = data;
     data = (E[])new Object[data.length+1000];
     int i = start, j = 0;

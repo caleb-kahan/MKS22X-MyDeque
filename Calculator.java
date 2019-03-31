@@ -5,7 +5,7 @@ import java.io.*;
 public class Calculator{
   public static double eval(String s){
     Scanner sys = new Scanner(s);
-    MyDeque<Double> tool = new MyDeque<Double>(10);
+    MyDeque<Double> tool = new MyDeque<Double>(20);
     System.out.println(tool.datLen());
     while(sys.hasNext()){
       if(! sys.hasNextDouble()){
@@ -37,9 +37,6 @@ public class Calculator{
         tool.addLast(sys.nextDouble());
      }
     }
-    System.out.println(tool.size());
-    System.out.println(tool.datLen());
-    System.out.println(tool);
 
     return tool.getLast();
   }
