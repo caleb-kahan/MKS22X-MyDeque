@@ -21,13 +21,13 @@ public class MyDeque<E>{
   public String toString(){
     String returner = "{";
     int i =start;
-    if(start<=end){
+    if(start<=end && start > -1){
       while(i<=end){
         returner += data[i] + " ";
         i++;
       }
     }
-    else{
+    else if(start > -1){
       while(i<data.length){
         returner += data[i] + " ";
         i++;
@@ -54,14 +54,22 @@ public class MyDeque<E>{
         }
       }
       else{
-        while(end>=i){
+	while(i<data.length){
+		data[j]=copy[i];
+          	i++;
+                j++;
+	
+	}
+	i=0;	
+        while(i<=end){
           data[j]=copy[i];
           i++;
           j++;
-          if(i==data.length) i = 0;
         }
       }
     }
+    start =0;
+    end = j-1;
   }
   public void addFirst(E element){
     if(element == null) throw new NullPointerException("Specified element is null");
