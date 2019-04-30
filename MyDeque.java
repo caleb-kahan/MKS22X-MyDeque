@@ -20,27 +20,11 @@ public class MyDeque<E>{
   }
   public String toString(){
     String returner = "{";
-    for(int i = 0;i<data.length;i++){
-      returner+=data[i] + " ";
-    }
-    /*int i =start;
-    if(start<=end && start > -1){
-      while(i<=end){
-        returner += data[i] + " ";
-        i++;
+    if(size !=0){
+      for(int i = 0;i<data.length;i++){
+        returner+=data[i] + " ";
       }
     }
-    else if(start > -1){
-      while(i<data.length){
-        returner += data[i] + " ";
-        i++;
-      }
-      i =0;
-      while(i<=end){
-        returner += data[i] + " ";
-        i++;
-      }
-    }*/
     return returner+ "}";
   }
   @SuppressWarnings("unchecked")
@@ -57,7 +41,6 @@ public class MyDeque<E>{
         }
       }
       else{
-        System.out.println(data.length);
       	while(i<copy.length){
       		data[j]=copy[i];
         	i++;
@@ -78,9 +61,6 @@ public class MyDeque<E>{
     if(element == null) throw new NullPointerException("Specified element is null");
     if(data.length == size ){
       resize();
-      for(E x: data){
-        System.out.print(x + " ");
-      }
     }
     size++;
     if(start==-1){
